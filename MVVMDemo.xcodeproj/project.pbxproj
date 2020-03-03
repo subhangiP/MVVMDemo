@@ -12,6 +12,9 @@
 		1B41EA1E229BE5E500E90980 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B41EA1C229BE5E500E90980 /* Main.storyboard */; };
 		1B41EA20229BE5ED00E90980 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B41EA1F229BE5ED00E90980 /* Assets.xcassets */; };
 		1B41EA23229BE5ED00E90980 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B41EA21229BE5ED00E90980 /* LaunchScreen.storyboard */; };
+		1B49F11E229BE87000C0CC3B /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B49F11D229BE87000C0CC3B /* ContactModel.swift */; };
+		1B49F120229BE88A00C0CC3B /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B49F11F229BE88A00C0CC3B /* ContactViewModel.swift */; };
+		1B49F123229BF5F300C0CC3B /* ServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B49F122229BF5F300C0CC3B /* ServiceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		1B41EA1F229BE5ED00E90980 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B41EA22229BE5ED00E90980 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B41EA24229BE5ED00E90980 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B49F11D229BE87000C0CC3B /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
+		1B49F11F229BE88A00C0CC3B /* ContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
+		1B49F122229BF5F300C0CC3B /* ServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,49 @@
 		1B41EA17229BE5E500E90980 /* MVVMDemo */ = {
 			isa = PBXGroup;
 			children = (
+				1B41EA2A229BE60D00E90980 /* Model */,
+				1B49F121229BF5C200C0CC3B /* View */,
+				1B49F11B229BE71600C0CC3B /* ViewModel */,
+				1B49F11C229BE72B00C0CC3B /* Controller */,
 				1B41EA18229BE5E500E90980 /* AppDelegate.swift */,
-				1B41EA1A229BE5E500E90980 /* ViewController.swift */,
 				1B41EA1C229BE5E500E90980 /* Main.storyboard */,
 				1B41EA1F229BE5ED00E90980 /* Assets.xcassets */,
 				1B41EA21229BE5ED00E90980 /* LaunchScreen.storyboard */,
 				1B41EA24229BE5ED00E90980 /* Info.plist */,
 			);
 			path = MVVMDemo;
+			sourceTree = "<group>";
+		};
+		1B41EA2A229BE60D00E90980 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1B49F11D229BE87000C0CC3B /* ContactModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1B49F11B229BE71600C0CC3B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1B49F11F229BE88A00C0CC3B /* ContactViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1B49F11C229BE72B00C0CC3B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1B41EA1A229BE5E500E90980 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1B49F121229BF5C200C0CC3B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1B49F122229BF5F300C0CC3B /* ServiceView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +176,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B49F123229BF5F300C0CC3B /* ServiceView.swift in Sources */,
 				1B41EA1B229BE5E500E90980 /* ViewController.swift in Sources */,
+				1B49F120229BE88A00C0CC3B /* ContactViewModel.swift in Sources */,
 				1B41EA19229BE5E500E90980 /* AppDelegate.swift in Sources */,
+				1B49F11E229BE87000C0CC3B /* ContactModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +329,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6SWXGZD865;
 				INFOPLIST_FILE = MVVMDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +348,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6SWXGZD865;
 				INFOPLIST_FILE = MVVMDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
